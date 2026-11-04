@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Personalidad y Marketing · Mercadotecnia</title>
+<style>
+:root{--bg:#f6f5fb;--cd:#fff;--tx:#1d1b2e;--mu:#615d78;--ln:#e3e0f0;--pk:#e6407f;--bl:#2f6fed;--or:#f77f2e;--yl:#f5b301;--pu:#7a3ff2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13111d;--cd:#1e1b2e;--tx:#f0eefa;--mu:#aaa5c4;--ln:#332f4a}}
+:root[data-theme="dark"]{--bg:#13111d;--cd:#1e1b2e;--tx:#f0eefa;--mu:#aaa5c4;--ln:#332f4a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--cd);border-bottom:1px solid var(--ln);display:flex;gap:6px;overflow-x:auto;padding:10px 14px}
+nav a{white-space:nowrap;text-decoration:none;color:var(--tx);font-weight:600;font-size:14px;padding:7px 14px;border-radius:8px;border-bottom:3px solid transparent}
+nav a.on{border-color:var(--c);background:var(--bg)}
+main{max-width:1000px;margin:0 auto;padding:0 16px 50px}
+.panel{display:none}.panel.on{display:block}
+.top{padding:36px 0 18px;border-bottom:4px solid var(--c)}
+.top small{color:var(--c);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.top h1{margin:4px 0 6px;font-size:clamp(26px,5vw,40px);line-height:1.15}.top p{margin:0;color:var(--mu);max-width:680px}
+.hero{padding:48px 0 28px}.hero h1{font-size:clamp(32px,7vw,54px);margin:0 0 8px;line-height:1.1}
+.hero h1 span{background:linear-gradient(90deg,var(--pk),var(--or),var(--pu));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);max-width:620px;font-size:18px}
+h2{font-size:20px;margin:34px 0 4px;display:flex;align-items:center;gap:10px}h2:before{content:'';width:8px;height:22px;background:var(--c);border-radius:4px}
+.sub{color:var(--mu);margin:0 0 14px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:16px;border-top:4px solid var(--c)}
+.card h3{margin:2px 0 4px;font-size:16px}.card p{margin:0;font-size:15px;color:var(--mu)}
+a.card{text-decoration:none;color:var(--tx);display:block;transition:transform .2s}a.card:hover{transform:translateY(-3px)}
+.ic{font-size:30px}
+.key{background:var(--cd);border:1px solid var(--ln);border-left:6px solid var(--c);border-radius:12px;padding:14px 18px;margin-top:20px}.key b{color:var(--c)}
+.stat{text-align:center}.stat b{display:block;font-size:34px;color:var(--c);line-height:1.1}.stat span{font-size:14px;color:var(--mu)}
+details{background:var(--cd);border:1px solid var(--ln);border-radius:12px;margin:8px 0}
+summary{cursor:pointer;padding:13px 16px;font-weight:700}details[open] summary{color:var(--c)}details>div{padding:0 16px 14px}
+details ul,details ol{margin:4px 0;padding-left:20px}li{margin:4px 0}
+.flip{perspective:900px;height:190px;cursor:pointer;border:0;background:none;padding:0;color:inherit;font:inherit}
+.flip>div{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}.flip.on>div{transform:rotateY(180deg)}
+.f,.b{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;padding:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:auto}
+.f{background:var(--cd);border:1px solid var(--ln);border-bottom:5px solid var(--c)}.b{background:var(--c);color:#fff;transform:rotateY(180deg);font-size:14px}
+.f h3{margin:4px 0;font-size:16px}.f i{font-size:11px;color:var(--mu);font-style:normal}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.tabs button{border:1.5px solid var(--c);background:none;color:var(--tx);border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:600}.tabs button.on{background:var(--c);color:#fff}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+#sp{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--pk),var(--or),var(--yl),var(--bl),var(--pu))}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:48px 24px 30px;border-radius:20px;margin-top:14px}
+.hero h1 span{background-image:linear-gradient(90deg,var(--pk),var(--or),var(--yl),var(--bl),var(--pu),var(--pk));background-size:200% 100%;animation:shine 6s linear infinite}
+.blobs{position:absolute;inset:0;z-index:-1;pointer-events:none}.blobs i{position:absolute;width:230px;height:230px;border-radius:50%;filter:blur(45px);opacity:.38;animation:drift 9s ease-in-out infinite}
+.blobs i:nth-child(1){background:var(--pk);top:-60px;left:-40px}.blobs i:nth-child(2){background:var(--bl);right:-40px;top:10px;animation-delay:-3s}.blobs i:nth-child(3){background:var(--yl);bottom:-80px;left:40%;animation-delay:-6s}.blobs i:nth-child(4){background:var(--pu);bottom:-60px;right:15%;animation-delay:-4s}
+.fl{display:flex;gap:14px;font-size:34px;margin-top:16px}.fl span{display:inline-block;animation:bob 3s ease-in-out infinite}.fl span:nth-child(2){animation-delay:.4s}.fl span:nth-child(3){animation-delay:.8s}.fl span:nth-child(4){animation-delay:1.2s}
+.ic{display:inline-block;animation:bob 3.2s ease-in-out infinite}
+.tick{overflow:hidden;white-space:nowrap;border-block:1px solid var(--ln);margin:14px 0}.tick div{display:inline-block;padding:10px 0;animation:mq 30s linear infinite;font-weight:700;font-size:14px}.tick b{margin:0 16px}
+.card:hover{box-shadow:0 10px 24px color-mix(in srgb,var(--c) 30%,transparent)}
+.top h1{animation:up .6s ease backwards}
+@keyframes bob{50%{transform:translateY(-6px)}}@keyframes up{from{opacity:0;transform:translateY(16px)}}@keyframes drift{50%{transform:translate(40px,-25px) scale(1.2)}}@keyframes shine{to{background-position:-200% 0}}@keyframes mq{to{transform:translateX(-50%)}}
+body{background:radial-gradient(circle at 8% 6%,color-mix(in srgb,var(--pk) 18%,transparent),transparent 38%),radial-gradient(circle at 94% 18%,color-mix(in srgb,var(--bl) 18%,transparent),transparent 40%),radial-gradient(circle at 82% 92%,color-mix(in srgb,var(--pu) 17%,transparent),transparent 42%),radial-gradient(circle at 4% 82%,color-mix(in srgb,var(--yl) 16%,transparent),transparent 38%),var(--bg);background-attachment:fixed}
+#bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}#bg i{position:absolute;display:block}
+#bg .a{width:190px;height:190px;border:3px solid var(--pk);border-radius:50%;top:14%;left:-70px;opacity:.35;animation:float 11s ease-in-out infinite}
+#bg .b{width:120px;height:120px;border:3px solid var(--bl);border-radius:24px;right:4%;top:30%;opacity:.35;animation:spin 40s linear infinite}
+#bg .c{width:240px;height:240px;left:3%;bottom:6%;background:radial-gradient(var(--pu) 2px,transparent 2.5px) 0 0/18px 18px;opacity:.35}
+#bg .d{width:150px;height:150px;right:8%;bottom:10%;background:linear-gradient(135deg,var(--yl),var(--or));clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.28;animation:float 13s ease-in-out infinite reverse}
+#bg .e{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--or),var(--pk));left:46%;top:8%;opacity:.2;animation:float 9s ease-in-out infinite}
+#bg .g{width:300px;height:300px;right:-120px;top:55%;border:2px dashed var(--pu);border-radius:50%;opacity:.3;animation:spin 60s linear infinite reverse}
+nav{background:color-mix(in srgb,var(--cd) 78%,transparent);backdrop-filter:blur(12px)}
+.card,details,.key,.q{background:color-mix(in srgb,var(--cd) 84%,transparent);backdrop-filter:blur(8px)}
+.card{position:relative;overflow:hidden}.card:after{content:'';position:absolute;right:-26px;bottom:-26px;width:90px;height:90px;border-radius:50%;background:var(--c);opacity:.09;pointer-events:none}
+.f:before{content:'';position:absolute;top:-22px;right:-22px;width:80px;height:80px;border-radius:50%;background:var(--c);opacity:.13}
+.stat b{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 45%,var(--pu)));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2:before{background:linear-gradient(var(--c),color-mix(in srgb,var(--c) 40%,var(--pu)))}h2:after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--ln),transparent)}
+.top{position:relative;isolation:isolate}.top:before{content:'';position:absolute;z-index:-1;right:-20px;top:0;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c) 38%,transparent),transparent 70%)}
+.top:after{content:'';position:absolute;z-index:-1;right:30px;bottom:14px;width:100px;height:64px;background:radial-gradient(var(--c) 1.6px,transparent 2.1px) 0 0/14px 14px;opacity:.55}
+.hero{background:color-mix(in srgb,var(--cd) 55%,transparent);border:1px solid var(--ln);backdrop-filter:blur(6px)}
+.hero:after{content:'';position:absolute;z-index:-1;right:-50px;top:-50px;width:210px;height:210px;border-radius:50%;border:2px solid color-mix(in srgb,var(--pu) 40%,transparent)}
+th{background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 55%,var(--pu)))}
+footer{border-top:3px solid transparent;border-image:linear-gradient(90deg,var(--pk),var(--or),var(--yl),var(--bl),var(--pu)) 1;margin-top:20px;padding-top:16px}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-26px)}}
+#gate{position:fixed;inset:0;z-index:60;display:none;overflow:auto;background:var(--bg);padding:24px 16px}#gate .gi{max-width:460px;margin:5vh auto;text-align:center}#gate .gi h1{margin:6px 0}#gate .card{text-align:left}
+.res{border-radius:18px;padding:22px;color:#fff;text-align:center;background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 55%,var(--pu)));margin-bottom:14px;animation:up .6s ease backwards}
+.res h2{justify-content:center;color:#fff;margin:4px 0}.res h2:before,.res h2:after{display:none}.res p{margin:6px auto;max-width:520px}.res em{font-size:19px;display:block;margin:10px auto;max-width:560px}.res .badge{display:inline-block;background:rgba(255,255,255,.22);border-radius:20px;padding:3px 14px;font-weight:700;font-size:14px}
+.avc{width:44px;height:44px;border-radius:50%;background:var(--ln);display:inline-flex;align-items:center;justify-content:center;overflow:hidden;flex:none}.res .avc{background:rgba(255,255,255,.25);border:3px solid #fff}
+.prof{display:flex;align-items:center;gap:12px}
+.fld{width:100%;padding:10px 12px;border:1.5px solid var(--ln);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit;margin:6px 0}
+.cf{position:fixed;top:-20px;z-index:40;pointer-events:none;animation:fall 2.8s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+#snd{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;border:0;border-radius:50%;width:44px;height:44px;font-size:20px;cursor:pointer;background:var(--cd);box-shadow:0 4px 14px rgba(0,0,0,.2)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--ln);padding:8px;text-align:left;vertical-align:top}th{background:var(--c);color:#fff}
+.q{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:18px}
+.opt{display:block;width:100%;text-align:left;background:var(--bg);color:var(--tx);border:2px solid var(--ln);border-radius:10px;padding:10px 14px;margin:8px 0;cursor:pointer;font:inherit}.opt:hover{border-color:var(--c)}
+.opt.ok{border-color:#1b9e6b;background:rgba(27,158,107,.18)}.opt.no{border-color:#d64550;background:rgba(214,69,80,.18)}
+.bar{height:8px;background:var(--ln);border-radius:8px;overflow:hidden;margin-bottom:14px}.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .4s}
+.btn{background:var(--c);color:#fff;border:0;padding:10px 20px;border-radius:8px;font-weight:700;cursor:pointer;font-size:15px;text-decoration:none;display:inline-block;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{background:var(--bg);border:1px solid var(--ln);border-radius:20px;padding:3px 12px;font-size:14px}
+footer{text-align:center;color:var(--mu);font-size:12px;padding:10px 16px 30px;max-width:900px;margin:0 auto}
+</style></head><body>
+<div id="bg"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><i class="e"></i><i class="g"></i></div><button id="snd" title="Sonido" onclick="tgSnd()">🔊</button>
+<div id="gate"><div class="gi"><div style="font-size:52px">🎭</div><h1>Crea tu cuenta para empezar</h1><p class="sub">Pon tu nombre y tu foto: aparecerán en tus resultados y en el ranking de la clase. Necesitas cuenta para participar.</p><div id="gbox"></div></div></div><div id="sp"></div><nav id="nav"></nav>
+<main>
+
+<div class="panel" id="p-inicio" style="--c:var(--pu)">
+<div class="hero"><div class="blobs"><i></i><i></i><i></i><i></i></div><h1>Tu personalidad <span>también compra</span></h1><p>Guía rápida para estudiantes de Mercadotecnia: cómo la personalidad explica lo que elegimos como consumidores y cómo la usan las marcas.</p><div class="fl"><span>🎭</span><span>🧠</span><span>🛒</span><span>💡</span></div></div>
+<div class="tick"><div id="tk"></div></div>
+<h2 id="hi">Elige tu ruta</h2><p class="sub">Cada parte tiene su color. Empieza por donde quieras.</p>
+<div class="grid">
+<a class="card" href="#marca" style="--c:var(--pk)"><div class="ic">🏷️</div><h3>1 · La marca</h3><p>Personalidad de marca y las 5 dimensiones de Aaker.</p></a>
+<a class="card" href="#psico" style="--c:var(--bl)"><div class="ic">🧠</div><h3>2 · La psicología</h3><p>Arquetipos de Jung y teorías de la personalidad.</p></a>
+<a class="card" href="#consumidor" style="--c:var(--or)"><div class="ic">🛒</div><h3>3 · El consumidor</h3><p>Rasgos, autoconcepto y estrategias.</p></a>
+<a class="card" href="#casos" style="--c:var(--pu)"><div class="ic">🚀</div><h3>4 · Marcas en acción</h3><p>Casos reales con resultados.</p></a>
+<a class="card" href="#quiz" style="--c:var(--yl)"><div class="ic">🎯</div><h3>Quiz</h3><p>12 preguntas para probarte.</p></a>
+<a class="card" href="#perfil" style="--c:var(--pk)"><div class="ic">🪞</div><h3>Tipos de cliente</h3><p>Qué tipos existen y cómo compran.</p></a>
+<a class="card" href="#test" style="--c:var(--or)"><div class="ic">🎲</div><h3>¿Qué cliente soy?</h3><p>Test de gustos con resultado.</p></a>
+<a class="card" href="#cuenta" style="--c:var(--bl)"><div class="ic">👤</div><h3>Mi cuenta</h3><p>Perfil con nombre y foto.</p></a></div>
+<h2>Datos que importan</h2><p class="sub">Tendencias del documento: de la demografía al comportamiento.</p>
+<div class="grid">
+<div class="card stat" style="--c:var(--pk)"><b>84%</b><span>dice que sus principios lo definen mejor que su grupo de edad</span></div>
+<div class="card stat" style="--c:var(--bl)"><b>79%</b><span>compra más a empresas que comparten sus valores</span></div>
+<div class="card stat" style="--c:var(--or)"><b>69%</b><span>paga más por marcas transparentes y auténticas</span></div>
+<div class="card stat" style="--c:var(--pu)"><b>85%</b><span>de las decisiones de consumo pasa por comunidades de intereses</span></div></div>
+
+<div class="key" style="--c:var(--pu)"><b>Marketing basado en la personalidad:</b> segmenta con rasgos psicológicos, no solo con datos demográficos o geográficos. Analiza actitudes, valores, estilos de vida y comportamiento (Marketing Directo, 2020).</div>
+</div>
+
+<div class="panel" id="p-marca" style="--c:var(--pk)">
+<div class="top"><small>Parte 1 · Empresa</small><h1>🏷️ La personalidad de marca</h1><p>Cómo una marca se vuelve “alguien” para su público.</p></div>
+<div class="key"><b>Definición:</b> conjunto de características humanas, atributos emocionales y valores que una empresa transmite con su identidad visual, tono de comunicación y estrategias de marketing.</div>
+<h2>Cifras clave</h2><div class="grid">
+<div class="card stat"><b>88%</b><span>dice que la autenticidad decide qué marcas apoyar</span></div>
+<div class="card stat"><b>82%</b><span>elige primero una marca conocida y memorable al buscar en línea</span></div>
+<div class="card stat"><b>46%</b><span>en EE. UU. pagaría más por marcas en las que confía</span></div>
+<div class="card stat"><b>23%</b><span>más de ingresos con imagen coherente en todos los canales</span></div></div>
+<h2>Las 5 dimensiones de Aaker</h2><p class="sub">Toca cada carta. Modelo de Jennifer Aaker.</p><div class="grid" id="aakerG"></div>
+<h2>Importancia y aplicación</h2>
+<details><summary>⭐ Por qué importa (4 pilares)</summary><div><ul><li><b>Diferenciación:</b> identidad única en mercados saturados.</li><li><b>Conexión emocional y fidelización:</b> compras aisladas pasan a relaciones duraderas.</li><li><b>Coherencia:</b> mismo mensaje en todos los puntos de contacto.</li><li><b>Mejores decisiones:</b> marco para evaluar líneas, alianzas y contenidos.</li></ul></div></details>
+<details><summary>🎤 Cómo se materializa (3 frentes)</summary><div><ul><li><b>Voz y tono:</b> selección léxica, estructura discursiva y carga emocional (empatía, autoridad, entusiasmo, solemnidad).</li><li><b>Identidad visual:</b> paleta según psicología del color, tipografías y estilo fotográfico.</li><li><b>Interacción digital:</b> tiempos de respuesta, curaduría de contenido y participación en tendencias.</li></ul></div></details>
+<details><summary>🧱 Cómo se construye (5 pasos)</summary><div><ol><li>Conocer al público (demográfico, psicográfico, conductual).</li><li>Definir elementos diferenciales.</li><li>Elegir rasgos principales: auténticos y aspiracionales.</li><li>Redactar declaración de personalidad y guía de estilo.</li><li>Integrar, monitorear y evolucionar.</li></ol></div></details>
+<details><summary>✨ Contenido con personalidad y SEO</summary><div><p>Refleja la voz y valores de la marca y combate la saturación informativa. Claves: buyer persona, voz y tono, storytelling, escucha activa (social listening) y adaptar el mensaje por canal. En SEO sube el engagement, baja el rebote y aumenta el tiempo de permanencia.</p></div></details>
+<details><summary>🛍️ Amazon Ads y herramientas de e-commerce</summary><div><ul><li><b>Brand Stores:</b> narrativa completa de la marca con recursos inmersivos.</li><li><b>Sponsored Brands:</b> destacan el ecosistema visual en la búsqueda.</li><li><b>Streaming y Live Shopping:</b> conexión en tiempo real e interactiva.</li></ul></div></details>
+<details><summary>🤖 IA y plantillas</summary><div><ul><li>Prompts de sistema para conservar los rasgos de marca.</li><li>Auditorías automáticas de tono.</li><li>Conversión multicanal de textos largos a cortos.</li><li>Plantillas estandarizadas (p. ej., Adobe Express).</li></ul></div></details>
+<h2>Mitos vs. realidad</h2><div class="grid">
+<div class="card"><h3>❌ Es solo logo y eslogan</h3><p>✅ También es comportamiento, trato al cliente y valores en práctica.</p></div>
+<div class="card"><h3>❌ Solo sirve en B2C</h3><p>✅ En B2B proyecta solidez, transparencia y fiabilidad.</p></div>
+<div class="card"><h3>❌ Nunca debe cambiar</h3><p>✅ Los valores se mantienen, pero evoluciona con la sociedad.</p></div></div>
+
+</div>
+
+<div class="panel" id="p-psico" style="--c:var(--bl)">
+<div class="top"><small>Parte 2 · Teoría</small><h1>🧠 La psicología detrás</h1><p>Arquetipos de Jung y seis grandes teorías de la personalidad.</p></div>
+<h2>Arquetipos de Jung</h2>
+<div class="key"><b>Idea:</b> existe un <b>inconsciente colectivo</b> con patrones y mitos compartidos por la humanidad, desde <i>La Odisea</i> hasta <i>Matrix</i> (Torres, 2015).</div>
+<div class="grid" style="margin:12px 0"><div class="card"><h3>🧬 Cultural e innato</h3><p>Esquemas heredados, moldeados por la sociedad.</p></div><div class="card"><h3>💓 Patrones emocionales</h3><p>Moldes que dan significado a lo que percibimos.</p></div><div class="card"><h3>🌍 Universal</h3><p>Aparecen en mitos de todas las culturas.</p></div></div>
+<p class="sub">Toca cada figura:</p><div class="grid" id="jungG"></div>
+<h2>Seis metateorías</h2><p class="sub">López Bonilla y López Bonilla (2007). Elige una.</p>
+<div class="tabs" id="tabs"></div><div class="card" id="tabBody"></div>
+<div class="key"><b>Paradoja de la personalidad (Albanese, 1993):</b> todos tenemos una personalidad, pero es difícil predecir marcas concretas con ella. Tras los “años oscuros” (críticas de Kassarjian, 1971) hubo un renacimiento desde finales de los ochenta.</div>
+<h2>Conceptos clave</h2>
+<details><summary>🛋️ Freud: Ello, Yo y Superyó</summary><div><p>Impulsos inconscientes (Id/Ello) chocan con las restricciones morales (Superego/Superyó); el Ego/Yo media. En marketing explica motivos subconscientes, hedonistas o de estatus.</p></div></details>
+<details><summary>🧭 Tipología CAD de Karen Horney</summary><div><ul><li><b>Complacientes:</b> buscan afecto y aprobación; marcas conocidas.</li><li><b>Agresivos:</b> quieren sobresalir; marcas de estatus.</li><li><b>Independientes:</b> valoran la libertad; productos únicos.</li></ul></div></details>
+<details><summary>🔎 Teoría de los rasgos</summary><div><p>Enfoque cuantitativo principal de la segmentación psicográfica: mide la personalidad con escalas de rasgos continuos.</p></div></details>
+<details><summary>🧬 Propiedades de la personalidad</summary><div><ul><li>Refleja diferencias individuales.</li><li>Es consistente y duradera.</li><li>Puede cambiar con eventos (matrimonio, hijos, pérdida de empleo) o con la madurez.</li></ul></div></details>
+</div>
+
+<div class="panel" id="p-consumidor" style="--c:var(--or)">
+<div class="top"><small>Parte 3 · Consumidor</small><h1>🛒 La personalidad del consumidor</h1><p>La demografía dice <i>quién</i> compra; la psicografía explica <i>por qué</i> (Stanton, Etzel y Walker, 2007).</p></div>
+<div class="key"><b>Segmentación psicográfica:</b> divide a los compradores por <b>personalidad, estilo de vida y valores</b>. Como medir la personalidad en masa es difícil, se usan el <b>autoconcepto</b> y las <b>personalidades de marca</b>.</div>
+<h2>Rasgos que influyen al comprar</h2><p class="sub">Schiffman y Wisenblit (2015). Toca cada carta.</p><div class="grid" id="rasgosG"></div>
+<h2>Cómo se ve el consumidor</h2><div class="grid">
+<div class="card"><h3>Real</h3><p>Cómo se ve hoy.</p></div><div class="card"><h3>Ideal</h3><p>Cómo le gustaría verse.</p></div><div class="card"><h3>Social</h3><p>Cómo cree que lo ven.</p></div><div class="card"><h3>Social ideal</h3><p>Cómo quisiera que lo vean.</p></div><div class="card"><h3>Yo extendido</h3><p>Sus bienes son parte de su identidad.</p></div></div>
+<h2>Inventario de Personalidad del Consumidor</h2><p class="sub">Sandoval Escobar et al. (2018): medir con constructos pensados para el mercado, no solo con pruebas generales como los Cinco Grandes.</p>
+<div class="two"><div class="card"><h3>😰 Neuroticismo</h3><ul><li>Más disonancia post-compra.</li><li>Valora garantías y devoluciones.</li><li>Reacciona fuerte a ofertas por tiempo limitado.</li></ul></div><div class="card"><h3>🎉 Extraversión</h3><ul><li>Consumo visible y de estatus.</li><li>Participa en comunidades de marca.</li><li>Disfruta la experiencia en tienda.</li></ul></div></div>
+<h2>Cómo usarlo en estrategia</h2><div class="grid"><div class="card"><h3>✉️ Mensajes</h3><p>Seguridad y control para perfiles reactivos; aventura y distinción para alta extraversión.</p></div><div class="card"><h3>🖥️ UX/UI</h3><p>Reseñas detalladas para introvertidos; soporte interactivo para muy sociales.</p></div><div class="card"><h3>💜 Lealtad</h3><p>Depende de alinear la imagen de marca con el autoconcepto del comprador.</p></div></div>
+<h2>Dos autores, dos enfoques</h2><div class="scroll"><table><tr><th>Criterio</th><th>Stanton et al. (2007)</th><th>Schiffman y Wisenblit (2015)</th></tr><tr><td>Personalidad</td><td>Explicativa, difícil de medir en masa</td><td>Medible con rasgos y escalas</td></tr><tr><td>Instrumento</td><td>Autoconcepto y personalidad de marca</td><td>Rasgos de consumo y yo extendido</td></tr><tr><td>Aplicación</td><td>Posicionar marcas afines a la autoimagen</td><td>Mensajes según estructura cognitiva y social</td></tr></table></div>
+</div>
+
+<div class="panel" id="p-casos" style="--c:var(--pu)">
+<div class="top"><small>Parte 4 · Práctica</small><h1>🚀 Marcas en acción</h1><p>Toca cada carta para ver qué hicieron.</p></div>
+<h2>Personalidades globales</h2><div class="grid" id="casosA"></div>
+<h2>Resultados en entornos digitales</h2><div class="grid" id="casosB"></div>
+</div>
+
+<div class="panel" id="p-quiz" style="--c:var(--yl)">
+<div class="top"><small>Reto</small><h1>🎯 Quiz final</h1><p>12 preguntas con retroalimentación inmediata.</p></div>
+<div class="q" style="margin-top:20px"><div class="bar"><i id="qb"></i></div><div id="qbox"></div></div></div>
+
+<div class="panel" id="p-perfil" style="--c:var(--pk)">
+<div class="top"><small>Teoría</small><h1>🪞 Tipos de cliente</h1><p>Los tipos y rasgos de consumidor que explica esta página.</p></div>
+<h2>Los 3 tipos de cliente (tipología CAD de Horney)</h2><p class="sub">Según Schiffman y Wisenblit (2015): las relaciones sociales son clave en el desarrollo de la personalidad.</p>
+<div class="grid"><div class="card" style="--c:var(--pk)"><div class="ic">🤝</div><h3>Complaciente</h3><p>Busca afecto y aprobación. Prefiere marcas conocidas y productos que lo integren socialmente.</p></div>
+<div class="card" style="--c:var(--or)"><div class="ic">🔥</div><h3>Agresivo</h3><p>Desea sobresalir, ganar poder y reconocimiento. Elige marcas de estatus y superioridad.</p></div>
+<div class="card" style="--c:var(--bl)"><div class="ic">🧭</div><h3>Independiente</h3><p>Valora la autosuficiencia y la libertad. Busca productos únicos o no masivos.</p></div></div>
+<h2>Tipos de consumidor según sus rasgos</h2><p class="sub">Cada rasgo tiene dos extremos y cada uno responde distinto a la publicidad.</p>
+<div class="scroll"><table><tr><th>Rasgo</th><th>Un extremo</th><th>El otro extremo</th></tr>
+<tr><td><b>Dogmatismo</b></td><td>Muy dogmático: prefiere marcas establecidas y publicidad respaldada por figuras de autoridad.</td><td>Poco dogmático: acepta ofertas e innovaciones desconocidas.</td></tr>
+<tr><td><b>Carácter social</b></td><td>Dirigido internamente: usa sus propios valores; responde a publicidad de características funcionales.</td><td>Dirigido por los demás: busca aprobación social; responde a aceptación social y tendencias.</td></tr>
+<tr><td><b>Necesidad de cognición</b></td><td>Alta: disfruta información detallada, texto informativo y argumentos estructurados.</td><td>Baja: se guía por colores, celebridades, música o imágenes atractivas.</td></tr>
+<tr><td><b>Nivel óptimo de estimulación</b></td><td>Alto: prefiere experiencias complejas, novedosas y con cierto riesgo.</td><td>Bajo: prefiere la rutina.</td></tr></table></div>
+<p class="sub" style="margin-top:14px">Según el Inventario de Personalidad del Consumidor (Sandoval Escobar et al., 2018) también se distinguen:</p>
+<div class="two"><div class="card" style="--c:var(--pu)"><h3>😰 Consumidor con alto neuroticismo</h3><p>Mayor disonancia post-compra, valora garantías y reacciona intensamente a ofertas por tiempo limitado.</p></div><div class="card" style="--c:var(--yl)"><h3>🎉 Consumidor extravertido</h3><p>Consumo visible y de estatus, participa en comunidades de marca y disfruta la experiencia en tienda.</p></div></div>
+<div class="key" style="--c:var(--or)"><b>¿Cuál eres tú?</b> Ve a <a href="#test">¿Qué cliente soy?</a> para descubrirlo.</div></div>
+
+<div class="panel" id="p-test" style="--c:var(--or)">
+<div class="top"><small>Descúbrete</small><h1>🎲 ¿Qué cliente soy?</h1><p>9 preguntas sobre tus gustos. Tu resultado usa solo los conceptos de esta página.</p></div>
+<div class="key"><b>Cómo funciona:</b> tus respuestas se relacionan con la <b>tipología CAD de Horney</b> (Parte 2), los <b>rasgos del consumidor</b> de Schiffman y Wisenblit (Parte 3) y las <b>dimensiones de Aaker</b> (Parte 1).</div>
+<div class="q" style="margin-top:16px"><div class="bar"><i id="pb"></i></div><div id="pbox"></div></div>
+</div>
+
+<div class="panel" id="p-cuenta" style="--c:var(--bl)"><div class="top"><small>Tu espacio</small><h1>👤 Mi cuenta</h1><p>Crea tu perfil con nombre y foto para que aparezcan en tus resultados.</p></div><div id="acc" style="margin-top:20px"></div></div>
+
+<div class="panel" id="p-clase" style="--c:var(--yl)"><div class="top"><small>Comunidad</small><h1>🏆 Ranking de la clase</h1><p>Puntajes del quiz y tipo de cliente de quienes tienen cuenta. Los resultados se borran 4 horas después del primero.</p></div><div id="rk" style="margin-top:20px"></div></div>
+
+<div class="panel" id="p-landing" style="--c:var(--pk)">
+<div class="hero"><div class="blobs"><i></i><i></i><i></i><i></i></div><h1>Personalidad en el <span>marketing</span></h1><p>Resumen express para recordar lo esencial.</p></div>
+<div class="grid">
+<div class="card" style="--c:var(--pk)"><div class="ic">🏷️</div><h3>Marca</h3><p>Su personalidad da diferenciación, conexión emocional, coherencia y mejores decisiones.</p></div>
+<div class="card" style="--c:var(--bl)"><div class="ic">🎭</div><h3>Jung y teorías</h3><p>Arquetipos y seis metateorías explican la personalidad.</p></div>
+<div class="card" style="--c:var(--or)"><div class="ic">🛒</div><h3>Consumidor</h3><p>Rasgos y autoconcepto influyen en qué marcas elige.</p></div>
+<div class="card" style="--c:var(--pu)"><div class="ic">🌟</div><h3>Aaker</h3><p>Sinceridad, entusiasmo, competencia, sofisticación y robustez.</p></div>
+<div class="card" style="--c:var(--yl)"><div class="ic">📈</div><h3>Idea clave</h3><p>Valores y autenticidad pesan más que la edad al decidir qué comprar.</p></div></div>
+<h2 style="--c:var(--pk)">Integrantes del proyecto</h2><p class="sub">Mercadotecnia · Análisis del Consumidor</p><div class="grid" id="team"></div>
+<a class="btn" href="#inicio">← Volver al recorrido</a>
+</div>
+</main>
+<footer>Fuentes: Marketing Directo (2020); Amazon Ads (s. f.); Adobe Express (s. f.); Torres (2015); Stanton, Etzel y Walker (2007); Schiffman y Wisenblit (2015); Sandoval Escobar et al. (2018); López Bonilla y López Bonilla (2007); Albanese (1993); Kassarjian (1971).</footer>
+<script>
+var TEAM=["Erin Victoria Vázquez Zavala","Valeria Arguello Barrera","Nathalia Ramos Barajas","Ashly Sarali Prado Gutiérrez","Pablo Isaac Gómez Rosas","Camila Mejía Orozco"];
+var NAV=[["inicio","Inicio","pu"],["marca","1 · Marca","pk"],["psico","2 · Psicología","bl"],["consumidor","3 · Consumidor","or"],["casos","4 · Casos","pu"],["perfil","Tipos de cliente","pk"],["quiz","Quiz","yl"],["test","¿Qué cliente soy?","or"],["clase","🏆 Clase","yl"],["cuenta","👤 Cuenta","bl"],["landing","Resumen","pk"]];
+var AA=[["🤝","Sinceridad","Honestidad, transparencia, integridad y bienestar del cliente. Ej.: Dove, Tom’s of Maine."],["⚡","Entusiasmo","Energía, audacia, juventud y aventura. Ej.: Red Bull, GoPro."],["🏆","Competencia","Eficiencia, fiabilidad, liderazgo técnico e inteligencia. Ej.: Apple, IBM."],["👑","Sofisticación","Elegancia, distinción, refinamiento y lujo. Ej.: Chanel, Rolls-Royce, Rolex."],["🏔️","Robustez","Durabilidad, fuerza, naturaleza y actividades al aire libre. Ej.: The North Face, Jeep, Patagonia."]];
+var JU=[["🎭","La Persona","Nuestra imagen pública: la fachada que decidimos mostrar."],["🌑","La Sombra","Lo que ocultamos por considerarlo reprobable o demasiado íntimo."],["🦸","El Héroe","Lucha contra la Sombra; determinado, con poca reflexión analítica."],["🦉","El Sabio","Guía del Héroe: revela las verdades del inconsciente colectivo."],["🃏","El Trickster","Trae caos, bromas y transgresión; muestra la vulnerabilidad de las reglas."],["👩‍👧","La Madre","Patrón de conductas e imágenes ligadas a la maternidad."],["👨","El Padre","Autoridad que da modelos y pautas para transitar la vida."],["☯️","Ánimus y Ánima","Contraparte de género internalizada: lo masculino en la psique femenina y lo femenino en la masculina."]];
+var TE=[["Psicoanalítica","Freud. Fuerzas inconscientes entre Ello, Yo y Superyó. Muchas compras responden a motivos simbólicos o a defensas ante la ansiedad."],["Neopsicoanalítica","Jung, Adler, Horney, Erikson. Relaciones sociales; modelo CAD y arquetipos para posicionar marcas."],["Fenomenológica","Rogers, Maslow, Kelly. Autorrealización y congruencia entre la marca y el autoconcepto real e ideal."],["Aprendizaje","Pavlov, Skinner, Bandura, Rotter. Lealtad por refuerzo, modelado (influenciadores) y locus de control."],["Rasgos","Allport, Eysenck, McCrae y Costa. Rasgos estables y medibles: Big Five, innovatividad, etnocentrismo, materialismo."],["Autorregulación cognoscitiva","Mischel, Carver y Scheier. Esquemas mentales: cómo se planean metas, se procesan anuncios y se controlan compras impulsivas."]];
+var RA=[["🆕","Innovación","Disposición a probar productos o servicios nuevos."],["🧱","Dogmatismo","Muy dogmáticos prefieren marcas establecidas y figuras de autoridad; poco dogmáticos aceptan novedades."],["🧭","Carácter social","Interno: valores propios y características funcionales. Dirigido por otros: aprobación social y tendencias."],["🎢","Estimulación (OSL)","Alto: busca experiencias novedosas y con riesgo. Bajo: prefiere la rutina."],["🔀","Búsqueda de variedad","Cambiar de marca solo por experimentar."],["📖","Necesidad de cognición","Alta: disfruta información detallada. Baja: se guía por colores, celebridades, música o imágenes."],["🏳️","Etnocentrismo","Aceptar o rechazar productos importados por creer que dañan la economía nacional."]];
+var CA=[["Nike","✔️","Acción y determinación: “Just Do It”, swoosh, historias de resiliencia y “Move to Zero”."],["Apple","🍏","Innovación minimalista, elegancia tecnológica, privacidad y líneas claras."],["Patagonia","🌲","Rebelde y auténtica; activismo ambiental y campañas como “No compres esta chaqueta”."],["Disney","🏰","Magia, nostalgia, imaginación y optimismo familiar; evoluciona de forma inclusiva."],["Dove","🕊️","Empoderamiento e inclusión; campaña de “Belleza Real” con cuerpos diversos."]];
+var CB=[["Holy Stone","🚁","Superación personal con escalada y drones: +279% en búsquedas directas."],["Cocolab","🦷","“Dopamina dental”: crecimiento de 50% interanual."],["MaryRuth’s","🍹","Cultura del bienestar (cócteles sin alcohol): +174% en nuevos clientes."],["Nespresso","♻️","Comunica sostenibilidad y reciclaje; más tráfico y consideración de marca."]];
+var Q=[["¿Qué analiza el marketing basado en la personalidad, además de lo demográfico?",["Solo el precio","Actitudes, valores, estilos de vida y comportamiento","Únicamente la ubicación"],1],["¿Quién propuso las 5 dimensiones de la personalidad de marca?",["Jennifer Aaker","Carl Jung","Karen Horney"],0],["Apple e IBM: ¿qué dimensión representan?",["Robustez","Sofisticación","Competencia"],2],["¿Qué arquetipo de Jung es nuestra imagen pública?",["La Sombra","La Persona","El Sabio"],1],["En la tipología CAD, ¿quiénes valoran la autosuficiencia y la libertad?",["Independientes","Agresivos","Complacientes"],0],["¿Cómo llamó Albanese a la dificultad de predecir compras con la personalidad?",["Paradoja de la personalidad","Años oscuros","Yo extendido"],0],["Un consumidor con baja necesidad de cognición se guía por…",["Textos largos y argumentos","Colores, celebridades, música o imágenes","Tablas de datos"],1],["¿Qué % dice que sus principios lo definen mejor que su grupo de edad?",["84%","23%","46%"],0],["Según Stanton, Etzel y Walker, la psicografía explica…",["Quién compra","Por qué compra","Dónde compra"],1],["¿Qué es el Yo extendido?",["Los bienes como extensión de la identidad","La imagen pública","Un arquetipo"],0],["¿Qué herramienta de Amazon Ads presenta la narrativa completa de la marca?",["Brand Stores","Sponsored Brands","Live Shopping"],0],["¿Qué arquetipo introduce caos, bromas y transgresión de normas?",["El Sabio","El Héroe","El Trickster"],2]];
+function $(i){return document.getElementById(i)}
+function cards(id,arr,col,ix){$(id).innerHTML=arr.map(function(a){return '<button class="flip" style="--c:'+col+'"><div><span class="f"><span class="ic">'+a[0]+'</span><h3>'+a[1]+'</h3><i>Toca para ver más</i></span><span class="b">'+a[ix]+'</span></div></button>'}).join("");$(id).querySelectorAll(".flip").forEach(function(b){b.onclick=function(){b.classList.toggle("on")}})}
+cards("aakerG",AA,"var(--pk)",2);cards("jungG",JU,"var(--bl)",2);cards("rasgosG",RA,"var(--or)",2);
+cards("casosA",CA.map(function(a){return [a[1],a[0],a[2]]}),"var(--pu)",2);cards("casosB",CB.map(function(a){return [a[1],a[0],a[2]]}),"var(--or)",2);
+function tab(i){$("tabs").innerHTML=TE.map(function(t,j){return '<button class="'+(i==j?"on":"")+'" onclick="tab('+j+')">'+(j+1)+'. '+t[0]+'</button>'}).join("");$("tabBody").style.setProperty("--c","var(--bl)");$("tabBody").innerHTML='<h3>'+TE[i][0]+'</h3><p>'+TE[i][1]+'</p>'}tab(0);
+$("tabs").style.setProperty("--c","var(--bl)");
+var cols=["var(--pk)","var(--bl)","var(--or)","var(--pu)","var(--yl)","var(--pk)"];
+$("team").innerHTML=TEAM.map(function(n,i){return '<div class="card" style="--c:'+cols[i]+'"><div class="ic">🎓</div><h3>'+n+'</h3></div>'}).join("");
+var PK={C:["🤝 Complaciente","Buscas afecto y aprobación; prefieres marcas conocidas y productos que te integren socialmente."],A:["🔥 Agresivo","Deseas sobresalir, ganar poder y reconocimiento; eliges marcas de estatus y superioridad."],I:["🧭 Independiente","Valoras la autosuficiencia y la libertad; buscas productos únicos o no masivos."],
+d1:["🧱 Muy dogmático","Prefieres marcas establecidas y publicidad respaldada por figuras de autoridad."],d0:["🆕 Poco dogmático","Aceptas ofertas e innovaciones desconocidas."],
+s1:["🧭 Dirigido internamente","Confías en tus propios valores para evaluar productos; respondes a publicidad orientada a características funcionales."],s0:["👥 Dirigido por los demás","Buscas la aprobación social de tus pares; respondes a publicidad centrada en la aceptación social y las tendencias."],
+n1:["📖 Alta necesidad de cognición","Disfrutas procesar información detallada; respondes a anuncios con abundante texto informativo y argumentos estructurados."],n0:["🎨 Baja necesidad de cognición","Te guías por pistas periféricas como colores, celebridades, música o imágenes atractivas."],
+o1:["🎢 Alto nivel óptimo de estimulación","Prefieres experiencias complejas, novedosas y con cierto riesgo."],o0:["🛋️ Bajo nivel óptimo de estimulación","Prefieres la rutina."]};
+AA.forEach(function(a,i){PK["a"+i]=[a[0]+" Marca que te atrae: "+a[1],a[2]]});
+var PQ=[["Un sábado libre, ¿qué prefieres?",[["Salir con mis amigos y que todos la pasemos bien","C"],["Ser quien organiza y destaca en el plan","A"],["Hacer algo por mi cuenta, a mi ritmo","I"]]],
+["Al comprar ropa o tecnología, ¿qué buscas?",[["Marcas conocidas con las que encajo con mi grupo","C"],["Algo que muestre estatus y me haga sobresalir","A"],["Algo único, poco masivo","I"]]],
+["¿Qué te importa más?",[["Que me aprecien y me aprueben","C"],["Ganar reconocimiento y poder","A"],["Mi libertad y mi autosuficiencia","I"]]],
+["En un equipo de trabajo, tú…",[["Busco llevarme bien con todos","C"],["Quiero liderar y que se note mi resultado","A"],["Prefiero trabajar de forma independiente","I"]]],
+["Ante una marca o producto que no conoces…",[["Prefiero marcas establecidas y que las recomiende una figura de autoridad","d1"],["Lo pruebo con gusto, me gustan las novedades","d0"]]],
+["Al decidir una compra, te guías por…",[["Mis propios valores y las características del producto","s1"],["La aprobación de los demás y las tendencias","s0"]]],
+["Un anuncio te convence más cuando…",[["Trae información detallada y argumentos","n1"],["Tiene colores, música, celebridades o imágenes atractivas","n0"]]],
+["Tu plan ideal es…",[["Una experiencia novedosa, compleja y con algo de riesgo","o1"],["Mi rutina de siempre","o0"]]],
+["¿Qué tipo de marca te atrae más?",[["Honesta, transparente y que se preocupa por sus clientes","a0"],["Enérgica, audaz y aventurera","a1"],["Eficiente, confiable y de alta calidad","a2"],["Elegante, refinada y aspiracional","a3"],["Resistente, fuerte y de actividades al aire libre","a4"]]]];
+var pi=0,pa=[];
+function pc(t,c){return '<div class="card" style="--c:var(--'+c+')"><h3>'+t[0]+'</h3><p>'+t[1]+'</p></div>'}
+function ps(){var b=$("pbox");$("pb").style.width=(pi/PQ.length*100)+"%";
+if(pi>=PQ.length){var c={C:0,A:0,I:0};pa.forEach(function(k){if(k in c)c[k]++});var mx=Math.max(c.C,c.A,c.I),w=["C","A","I"].filter(function(k){return c[k]==mx}),o=pa.filter(function(k){return!(k in c)});
+pEnd(w);b.innerHTML=pHead(w)+'<div class="key" style="--c:var(--pk)"><b>Tu tipo de cliente (tipología CAD):</b> '+w.map(function(k){return PK[k][0]}).join(" + ")+(w.length>1?" (empate entre tipos)":"")+'</div><div class="grid" style="margin:12px 0">'+w.map(function(k){return pc(PK[k],"pk")}).join("")+'</div><h3>Tus rasgos como consumidor</h3><div class="grid" style="margin:12px 0">'+o.map(function(k){return pc(PK[k],k[0]=="a"?"pu":"or")}).join("")+'</div><p style="color:var(--mu);font-size:14px">Es una dinámica educativa basada en los conceptos de esta página; no es una prueba psicométrica. Recuerda que la personalidad también puede cambiar con eventos de vida o con la madurez.</p><button class="btn" onclick="pi=0;pa=[];ps()">Repetir test</button> <a class="btn" href="#consumidor" style="background:var(--or)">Ver rasgos del consumidor</a>';return}
+var q=PQ[pi];b.innerHTML='<p><b>'+(pi+1)+'/'+PQ.length+'.</b> '+q[0]+'</p>'+q[1].map(function(o,i){return '<button class="opt" data-k="'+o[1]+'">'+o[0]+'</button>'}).join("");
+
+b.querySelectorAll(".opt").forEach(function(o){o.onclick=function(){pa.push(o.dataset.k);pi++;ps()}})}ps();
+var qi=0,sc=0;
+function qs(){var b=$("qbox");$("qb").style.width=(qi/Q.length*100)+"%";
+if(qi>=Q.length){qEnd(b);return}
+var q=Q[qi];b.innerHTML='<p><b>'+(qi+1)+'/'+Q.length+'.</b> '+q[0]+'</p>'+q[1].map(function(o,i){return '<button class="opt" data-i="'+i+'">'+o+'</button>'}).join("")+'<p id="fb"></p>';
+b.querySelectorAll(".opt").forEach(function(o){o.onclick=function(){var i=+o.dataset.i;b.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(+x.dataset.i==q[2])x.classList.add("ok")});if(i==q[2]){sc++;$("fb").textContent="¡Correcto! 🎉"}else{o.classList.add("no");$("fb").textContent="Casi. La correcta está en verde."}
+var n=document.createElement("button");n.className="btn";n.textContent="Siguiente →";n.onclick=function(){qi++;qs()};b.appendChild(n)}})}qs();
+var SND=true,AC=null,tmp="";
+function LS(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+var U=LS("pm_users")||{},cur=LS("pm_cur")||null;
+function save(){LS("pm_users",U);LS("pm_cur",cur)}
+function me(){return cur&&U[cur]?U[cur]:null}
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function av(u,s){return '<span class="avc" style="width:'+s+'px;height:'+s+'px;font-size:'+s*.55+'px">'+(u&&u.photo?'<img src="'+u.photo+'" alt="" style="width:100%;height:100%;object-fit:cover">':'👤')+'</span>'}
+function tgSnd(){SND=!SND;$("snd").textContent=SND?"🔊":"🔇"}
+function play(n,ty){if(!SND)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();var t=AC.currentTime;n.forEach(function(f,i){var o=AC.createOscillator(),g=AC.createGain(),s=t+i*.16;o.type=ty||"triangle";o.frequency.value=f;o.connect(g);g.connect(AC.destination);g.gain.setValueAtTime(.0001,s);g.gain.exponentialRampToValueAtTime(.2,s+.03);g.gain.exponentialRampToValueAtTime(.0001,s+.45);o.start(s);o.stop(s+.5)})}catch(e){}}
+function party(cs){for(var i=0;i<46;i++){var d=document.createElement("div");d.className="cf";d.style.left=Math.random()*100+"%";d.style.width=d.style.height=8+Math.random()*8+"px";d.style.background=cs[i%cs.length];d.style.animationDelay=Math.random()*.8+"s";d.style.animationDuration=2+Math.random()*1.5+"s";document.body.appendChild(d);setTimeout(function(x){x.remove()}.bind(null,d),4500)}}
+var TP={C:["pk","Eres de los que compran para pertenecer: tu mejor marca es la que te une a los demás.",[523,659,784,659,784]],A:["or","Vas por el reconocimiento: donde hay estatus, ahí estás tú.",[392,523,659,784,1047]],I:["bl","Libre y único: lo masivo no es lo tuyo.",[440,587,740,880,740]]};
+var NOACC='<p><small>Crea tu perfil en <a href="#cuenta" style="color:#fff">Cuenta</a> para ver aquí tu nombre y foto.</small></p>';
+function pHead(w){var k=w[0],t=TP[k],u=me();return '<div class="res" style="--c:var(--'+t[0]+')">'+av(u,84)+'<h2>'+(u?esc(u.name||cur):"Invitado")+'</h2><span class="badge">'+PK[k][0]+'</span><em>“'+t[1]+'”</em><p>'+PK[k][1]+'</p>'+(u?"":NOACC)+'</div>'}
+function pEnd(w){var k=w[0],t=TP[k],u=me();play(t[2],"triangle");party(["var(--"+t[0]+")","var(--yl)","var(--pu)","#fff"]);if(u){stamp(u);u.type=PK[k][0];save();sync()}}
+function qEnd(b){var u=me(),hi=sc>=10,mid=sc>=7,c=hi?"or":mid?"bl":"pu",ph=hi?"¡Nivel experto! Ya hablas el idioma del consumidor.":mid?"¡Vas muy bien! Un repaso más y lo dominas.":"Todo gran marketer empezó aprendiendo. Repasa las partes 1 a 3 y vuelve a intentarlo.";
+b.innerHTML='<div class="res" style="--c:var(--'+c+')">'+av(u,84)+'<h2>'+(u?esc(cur):"Invitado")+'</h2><span class="badge">'+sc+' / '+Q.length+' '+(hi?"🏅":mid?"👏":"📚")+'</span><em>“'+ph+'”</em>'+(u?"":NOACC)+'</div><button class="btn" onclick="qi=0;sc=0;qs()">Reintentar</button>';
+play(hi?[523,659,784,1047,1319]:mid?[392,523,659,784]:[330,294,262],hi?"triangle":"sine");if(mid)party(["var(--"+c+")","var(--or)","var(--pk)","var(--pu)"]);if(u){stamp(u);if(sc>=(u.qb||0)){u.qb=sc;u.quiz=sc+"/"+Q.length}save();sync()}}
+function setWho(){var a=document.querySelector('#nav a[data-p="cuenta"]'),u=me();if(a)a.textContent=u?"👤 "+cur:"👤 Cuenta";var g=$("hi");if(g)g.textContent=u?"Hola, "+cur+" 👋 Elige tu ruta":"Elige tu ruta"}
+function renderAcc(t){var a=t||$("acc"),u=me(),h="";
+if(u){h='<div class="card" style="--c:var(--bl)"><div class="prof">'+av(u,64)+'<div><h3>'+esc(cur)+'</h3><p>Sesión iniciada</p></div></div><p style="margin-top:10px">🎯 Mejor puntaje del quiz: '+(u.quiz||"aún sin resultado")+'<br>🪞 Tipo de cliente: '+(u.type||"aún sin resultado")+'</p><button class="btn" onclick="logout()">Cerrar sesión</button> <button class="btn" style="background:var(--mu)" onclick="delAsk(this)">Borrar mi perfil</button></div>'}
+else{h='<div class="card" style="--c:var(--bl)"><h3>Crear perfil</h3><input class="fld" id="nm" maxlength="30" placeholder="Tu nombre"><label style="font-size:14px;color:var(--mu)">Foto de perfil</label><input class="fld" id="ph" type="file" accept="image/*"><div id="pv"></div><button class="btn" onclick="reg()">Registrarme e iniciar sesión</button></div>';
+var ks=Object.keys(U);if(ks.length)h+='<h2>Iniciar sesión</h2><div class="grid">'+ks.map(function(k){return '<button class="card prof" style="--c:var(--pk);cursor:pointer;text-align:left;font:inherit;color:inherit" data-u="'+esc(k)+'">'+av(U[k],44)+'<b>'+esc(k)+'</b></button>'}).join("")+'</div>';
+h+='<p class="sub" style="margin-top:12px">Los perfiles se guardan solo en este navegador y dispositivo, sin contraseña.</p>'}
+a.innerHTML=h;var f=$("ph");if(f)f.onchange=function(){if(!f.files[0])return;var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var c=document.createElement("canvas");c.width=c.height=120;var s=Math.min(im.width,im.height);c.getContext("2d").drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,120,120);tmp=c.toDataURL("image/jpeg",.8);$("pv").innerHTML=av({photo:tmp},64)};im.src=r.result};r.readAsDataURL(f.files[0])};
+a.querySelectorAll("[data-u]").forEach(function(b){b.onclick=function(){cur=b.dataset.u;save();closeGate();renderAcc();setWho();sync()}})}
+function reg(){var n=$("nm").value.trim();if(!n){$("nm").focus();return}U[n]=U[n]||{};U[n].id=U[n].id||rid();if(tmp)U[n].photo=tmp;tmp="";cur=n;save();closeGate();renderAcc();setWho();sync()}
+function openGate(){$("gate").style.display="block";renderAcc($("gbox"))}
+function closeGate(){$("gate").style.display="none";$("gbox").innerHTML=""}
+function logout(){cur=null;save();renderAcc();setWho();sync0();openGate()}
+var DB=null,UID=null,RS=0,RK=[];
+function sync0(){}
+function okp(p){return typeof p=="string"&&p.indexOf("data:image/jpeg;base64,")==0}
+function sync(){expire();var u=me();if(FB_URL&&u){fbPut(u);return}if(DB&&UID&&u){DB.collection("profiles").doc(UID).set({name:cur,photo:u.photo||"",quiz:u.quiz||"",qn:parseInt(u.quiz,10)||0,type:u.type||"",rt:u.rt||0,t:Date.now()}).catch(function(){})}}
+function drawRank0(){var r=$("rk");if(RS==0){r.innerHTML='<p class="sub">Cargando ranking…</p>';return}
+if(RS==2){r.innerHTML='<div class="key" style="--c:var(--yl)"><b>Ranking no disponible.</b> No se pudo conectar con el ranking por ahora. Tu progreso se sigue guardando en este dispositivo.</div>';return}
+var L=RK.filter(function(x){return x&&x.name}).sort(function(a,b){return (b.qn||0)-(a.qn||0)});
+r.innerHTML=L.length?'<div class="grid">'+L.map(function(x,i){return '<div class="card prof" style="--c:var(--'+(i<3?'or':'pu')+')"><b style="font-size:20px">'+(i<3?["🥇","🥈","🥉"][i]:i+1)+'</b>'+av({photo:okp(x.photo)?x.photo:""},44)+'<div><b>'+esc(String(x.name))+'</b><br><small>🎯 '+esc(String(x.quiz||"sin quiz"))+(x.type?' · '+esc(String(x.type)):'')+'</small></div></div>'}).join("")+'</div>':'<p class="sub">Aún no hay resultados. ¡Sé el primero!</p>'}
+(async function(){if(FB_URL)return;try{var d=await claude.use("db"),us=await claude.use("user");if(!d){RS=2;drawRank();return}DB=d;UID=us&&us.id?await us.id():null;if(!UID){RS=2;drawRank();return}
+DB.collection("profiles").onSnapshot(function(s){RK=s.docs.map(function(x){var d=x.data();d.id=x.id;return d});RS=1;drawRank()},function(){RS=2;drawRank()});sync()}catch(e){RS=2;drawRank()}})();
+drawRank();
+$("nav").innerHTML=NAV.map(function(n){return '<a href="#'+n[0]+'" data-p="'+n[0]+'" style="--c:var(--'+n[2]+')">'+n[1]+'</a>'}).join("");
+function route(){var h=location.hash.slice(1)||"inicio";if(!$("p-"+h))h="inicio";document.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.id=="p-"+h)});document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.dataset.p==h)});window.scrollTo(0,0);var an=document.querySelector("#nav a.on");if(an)an.scrollIntoView({inline:"center",block:"nearest"});anim();if(h=="cuenta")renderAcc();setWho()}
+function anim(){var p=document.querySelector(".panel.on");p.querySelectorAll(".card,.key,details,.tabs,.scroll").forEach(function(e,i){e.style.animation="none";void e.offsetWidth;e.style.animation="up .5s ease backwards";e.style.animationDelay=Math.min(i,10)*60+"ms"});p.querySelectorAll(".stat b").forEach(function(b){var t=parseInt(b.dataset.t||b.textContent,10),c=0;b.dataset.t=t;var s=setInterval(function(){c+=Math.max(1,Math.ceil(t/25));if(c>=t){c=t;clearInterval(s)}b.textContent=c+"%"},35)})}
+var K=["Sinceridad","Entusiasmo","Competencia","Sofisticación","Robustez","Arquetipos","Autoconcepto","Rasgos","Personalidad de marca","Psicografía"],KC=["pk","bl","or","pu","yl"],ks=K.map(function(k,i){return '<b style="color:var(--'+KC[i%5]+')">● '+k+'</b>'}).join("");$("tk").innerHTML=ks+ks;
+window.addEventListener("scroll",function(){var h=document.documentElement;$("sp").style.width=h.scrollTop/((h.scrollHeight-h.clientHeight)||1)*100+"%"});
+/* RANKING FUERA DE CLAUDE: pega aquí la URL de tu Firebase Realtime Database, por ejemplo "https://tu-proyecto-default-rtdb.firebaseio.com" (sin / al final). Si lo dejas vacío, el ranking usa la base de datos de Claude. */
+var FB_URL="",H=4*36e5,RV=0;
+function rid(){return Math.random().toString(36).slice(2)+Date.now().toString(36)}
+function fbPut(u){if(!u.id){u.id=rid();save()}fetch(FB_URL+"/profiles/"+u.id+".json",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:cur,photo:u.photo||"",quiz:u.quiz||"",qn:parseInt(u.quiz,10)||0,type:u.type||"",rt:u.rt||0,t:Date.now()})}).catch(function(){})}
+function fbPull(){fetch(FB_URL+"/profiles.json").then(function(r){return r.json()}).then(function(o){RK=Object.keys(o||{}).map(function(k){var d=o[k];d.id=k;return d});RS=1;drawRank()}).catch(function(){RS=2;drawRank()})}
+if(FB_URL){fbPull();setInterval(fbPull,10000)}
+function expire(){var u=me();if(u&&u.rt&&Date.now()-u.rt>H){delete u.rt;delete u.quiz;delete u.qb;delete u.type;save();return 1}return 0}
+function stamp(u){expire();if(!u.rt)u.rt=Date.now()}
+function xp(x){return x.rt&&Date.now()-x.rt<H?x:Object.assign({},x,{quiz:"",qn:0,type:""})}
+function rv(i){RV=i;drawRank()}
+function delAsk(b){if(!b.dataset.s){b.dataset.s=1;b.textContent="¿Seguro? Toca otra vez para borrar";b.style.background="var(--pk)";return}delProf()}
+function delProf(){var n=cur;if(FB_URL&&U[n]&&U[n].id){fetch(FB_URL+"/profiles/"+U[n].id+".json",{method:"DELETE"}).catch(function(){})}if(DB&&UID){try{DB.collection("profiles").doc(UID).delete().catch(function(){})}catch(e){}}delete U[n];cur=null;save();renderAcc();setWho();openGate()}
+function drawRank(){if(RS!=1){drawRank0();return}var r=$("rk"),L=RK.filter(function(x){return x&&x.name}).map(xp).sort(function(a,b){return(b.qn||0)-(a.qn||0)}),T=[PK.C[0],PK.A[0],PK.I[0]],cols=["pk","or","bl"];
+var tabs='<div class="tabs" style="--c:var(--yl)"><button class="'+(RV==0?"on":"")+'" onclick="rv(0)">🎯 Por puntaje</button><button class="'+(RV==1?"on":"")+'" onclick="rv(1)">🪞 Por tipo de cliente</button></div>';
+function rw(x,m){var mi=FB_URL?(me()||{}).id:UID,me1=mi&&x.id==mi;return '<div class="card prof" style="--c:var(--'+(me1?"pk":"pu")+')"><b style="font-size:20px">'+m+'</b>'+av({photo:okp(x.photo)?x.photo:""},44)+'<div><b>'+esc(String(x.name))+(me1?" (tú)":"")+'</b><br><small>🎯 '+esc(String(x.quiz||"sin quiz"))+(x.type?" · "+esc(String(x.type)):"")+'</small></div></div>'}
+if(!L.length){r.innerHTML=tabs+'<p class="sub">Aún no hay resultados. ¡Sé el primero!</p>';return}
+if(RV==0){r.innerHTML=tabs+'<div class="grid">'+L.map(function(x,i){return rw(x,i<3?["🥇","🥈","🥉"][i]:i+1)}).join("")+'</div>';return}
+var h=tabs+'<div class="grid" style="margin-bottom:14px">'+T.map(function(t,i){return '<div class="card" style="--c:var(--'+cols[i]+');text-align:center"><b style="font-size:30px;color:var(--c)">'+L.filter(function(x){return x.type==t}).length+'</b><br><small>'+t+'</small></div>'}).join("")+'</div>';
+T.concat([""]).forEach(function(t){var G=L.filter(function(x){return(x.type||"")==t});if(G.length)h+='<h2 style="--c:var(--pk)">'+(t||"Aún sin test")+'</h2><div class="grid">'+G.map(function(x){return rw(x,"")}).join("")+'</div>'});
+r.innerHTML=h}
+[["marca","psico","Parte 2 · La psicología"],["psico","consumidor","Parte 3 · El consumidor"],["consumidor","casos","Parte 4 · Marcas en acción"],["casos","perfil","Tipos de cliente"],["perfil","test","¿Qué cliente soy?"]].forEach(function(x){var p=$("p-"+x[0]);if(p)p.insertAdjacentHTML("beforeend",'<div style="text-align:center;margin-top:28px"><a class="btn" href="#'+x[1]+'">Siguiente: '+x[2]+' →</a></div>')});
+window.addEventListener("hashchange",route);window.addEventListener("hashchange",function(){if(!me())openGate()});route();expire();if(!me())openGate();setInterval(function(){if(expire()){sync();drawRank();renderAcc()}else drawRank()},60000);
+</script></body></html>
